@@ -102,6 +102,13 @@ public class AddressableImportRule
     [ConditionalField("matchType", AddressableImportRuleMatchType.Regex, "simplified", false)]
     public string addressReplacement = string.Empty;
 
+    /// <summary>
+    /// Ignore Flag to be directory as a Addressable
+    /// </summary>
+    [Tooltip("Ignore Flag: directory not to be a Addressable")]
+    [Label("Ignore Directory as a Addressable")]
+    public bool IgnoreDirectory = true;
+
     public bool HasLabel
     {
         get

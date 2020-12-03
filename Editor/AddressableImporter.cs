@@ -183,6 +183,10 @@ public class AddressableImporter : AssetPostprocessor
         {
             if (!r.Match(assetPath))
                 continue;
+
+            if(r.IgnoreDirectory && ((File.GetAttributes(assetPath) & FileAttributes.Directory) == FileAttributes.Directory))
+	            continue;
+	        
             rule = r;
             return true;
         }
