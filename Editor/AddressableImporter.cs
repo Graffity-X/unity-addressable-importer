@@ -88,6 +88,13 @@ public class AddressableImporter : AssetPostprocessor
         var dirty = false;
         if (TryGetMatchedRule(assetPath, importSettings, out var matchedRule))
         {
+            if (matchedRule.IgnoreDirectory &&
+                Directory.Exists(assetPath) &&
+                ((File.GetAttributes(assetPath) & FileAttributes.Directory) == FileAttributes.Directory))
+            {
+                return dirty;
+            }
+
             // Apply the matched rule.
             var entry = CreateOrUpdateAddressableAssetEntry(settings, importSettings, matchedRule, assetPath);
             if (entry != null)
@@ -183,10 +190,7 @@ public class AddressableImporter : AssetPostprocessor
         {
             if (!r.Match(assetPath))
                 continue;
-
-            if(r.IgnoreDirectory && ((File.GetAttributes(assetPath) & FileAttributes.Directory) == FileAttributes.Directory))
-	            continue;
-	        
+            
             rule = r;
             return true;
         }
