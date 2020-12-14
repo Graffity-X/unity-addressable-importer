@@ -1,4 +1,4 @@
-## [0.9.4a](https://github.com/Graffity-X/unity-addressable-importer/compare/v0.9.3...v0.9.4a) (2020-10-17)
+## [0.9.4](https://github.com/Graffity-X/unity-addressable-importer/compare/v0.9.3...v0.9.4) (2020-12-14)
 
 
 ### Features
