@@ -1,3 +1,11 @@
+## [0.9.4a](https://github.com/Graffity-X/unity-addressable-importer/compare/v0.9.3...v0.9.4a) (2020-10-17)
+
+
+### Features
+* Add DirectoryIgnoreOptions
+
+
+
 ## [0.9.3](https://github.com/favoyang/unity-addressable-importer/compare/v0.9.2...v0.9.3) (2020-10-17)
 
 
